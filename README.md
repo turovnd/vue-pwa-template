@@ -1,5 +1,5 @@
 # Vue PWA template
-The project was build by `vue-cli` and upgrade by customer improvements.
+The project was built by `vue-cli` and upgrade by custom improvements.
 
 ## Project structure
 - `src/api` module for work with API endpoint, it has functions for simplify making CRUD requests and set query attributes:
