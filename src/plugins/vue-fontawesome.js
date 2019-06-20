@@ -10,9 +10,33 @@
 import Vue from 'vue';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faXRay } from '@fortawesome/free-solid-svg-icons';
+import {
+	faIndent,
+	faOutdent,
+	faAward,
+	faLayerGroup,
+	faChevronUp,
+	faChevronDown,
+	faUser,
+	faCog,
+	faSignOutAlt,
+	faBell,
+	faLanguage
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faXRay);
+library.add(
+	faIndent,
+	faOutdent,
+	faAward,
+	faLayerGroup,
+	faChevronUp,
+	faChevronDown,
+	faUser,
+	faCog,
+	faSignOutAlt,
+	faBell,
+	faLanguage
+);
 
 Vue.component('fa-icon', FontAwesomeIcon);

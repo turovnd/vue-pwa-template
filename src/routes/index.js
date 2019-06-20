@@ -9,11 +9,17 @@ export default [
 	// Home Page
 	{
 		path: '/',
-		name: 'Home',
 		meta: {
 			requiresAuth: true
 		},
-		component: () => import('../views/Home')
+		component: () => import('../views/layouts/main'),
+		children: [
+			{
+				path: '/',
+				name: 'Home',
+				component: () => import('../views/Home')
+			}
+		]
 	},
 
 	// About page

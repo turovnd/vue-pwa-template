@@ -1,0 +1,57 @@
+// IE10&11 Flexbox fix
+@media all and (-ms-high-contrast:none) {
+  html {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.app-header {
+  flex: 0 0 $header-height;
+  z-index: $zindex-sticky;
+  width: 100%;
+}
+
+.app-body {
+  flex: auto;
+  width: 100%;
+  overflow-x: hidden;
+  margin-left: $aside-width;
+  background-color: $body-bg;
+  padding-bottom: 40px;
+
+  .main {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+
+//
+// Animations
+//
+.app-header,
+.app-aside,
+.app-body,
+.main {
+  transition: margin-left $layout-transition-speed, margin-right $layout-transition-speed, width $layout-transition-speed, flex $layout-transition-speed;
+}
+
+.app-aside--hidden {
+  .app-aside {
+    margin-left: -($aside-width - $aside-width-hidden);
+  }
+  .app-body {
+    margin-left: $aside-width-hidden;
+  }
+}
+
+.hidden {
+  display: none;
+}
